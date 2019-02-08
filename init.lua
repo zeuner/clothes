@@ -173,7 +173,29 @@ if rawget(
 			action = show_clothes_config,
 			condition = function(player)
 				return true
-			end,
+			end
+		}
+	)
+else if rawget(
+	_G,
+	"sfinv"
+) then
+	sfinv.register_page(
+		'clothes:configure',
+		{
+			title = 'Clothes',
+			get = sfinv.pages[
+				"sfinv:crafting"
+			].get,
+			on_enter = function(
+				self,
+				player,
+				context
+			)
+				show_clothes_config(
+					player
+				)
+			end
 		}
 	)
 else
