@@ -176,7 +176,7 @@ if rawget(
 			end
 		}
 	)
-else if rawget(
+elseif rawget(
 	_G,
 	"sfinv"
 ) then
